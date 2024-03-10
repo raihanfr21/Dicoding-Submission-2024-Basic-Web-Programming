@@ -1,0 +1,344 @@
+body {
+  font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #AFD3E2;
+}
+
+.header {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo img {
+  max-width: 150px;
+}
+
+.header .navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header .navbar ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.header .navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.header .navbar ul li a:hover {
+  color: #ff0000;
+}
+
+main {
+  margin: 20px;
+}
+
+.slider {
+  max-width: 1000px;
+  position: relative;
+  padding-top: 20px;
+  margin: auto;
+}
+
+.imgslide {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+  width:100%;height: 400px;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  color: rgb(255, 254, 224);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.pre:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(0, 0, 0);
+}
+
+.text {
+  color: #fafafa;
+  font-size: 15px;
+  padding: 20px 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.slider .numberslide {
+  color: #ffffff;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+@media screen and (max-width: 800px) {
+
+  .slider {
+      padding: 8px 50px 12px 50px;
+  }
+
+  .next {
+      right: 50px;
+      border-radius: 3px 0 0 3px;
+  }
+  
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+      opacity: .4;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+      opacity: .4;
+  }    
+  to {
+      opacity: 1;
+  }
+}
+
+.container .page {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.page .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  border-radius: 50%;
+}
+
+.page .active,
+.page .dot:hover {
+  background-color: #ce0000;
+}
+
+.slider-label {
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.tbl-selengkapnya {
+  display: block;
+  background-color: #2B3467;
+  color: #ffffff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  width: 150px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.tbl-selengkapnya:hover {
+  background-color: red;
+}
+
+.artikel-terbaru {
+  padding: 30px;
+}
+
+.artikel-terbaru h2 {
+  margin: 0 0 0px;
+  font-size: 24px;
+  text-align: center;
+  color: black;
+}
+
+.artikel-terbaru p {
+  text-align: center;
+  font-size: 16px;
+  color: #333
+}
+
+section.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+div.card {
+  display: flex;
+  flex: 0 0 calc(75% - 20px);
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+div.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.card .text {
+  flex-grow: 1;
+}
+
+div.card h2 {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+div.card p {
+  font-size: 16px;
+  color: #666;
+  margin: 30px;
+  padding-right: 30px;
+}
+
+.biodata {
+  width: 250px;
+  margin-left: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  top: -230px;
+}
+
+.biodata img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+}
+
+.biodata h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.biodata p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #666;
+}
+
+footer {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  margin-top: -30px;
+}
+
+footer p {
+  margin: 0;
+}
+
+.logo {
+  margin-right: 5px;
+}
+
+.logo img {
+  height: 35px;
+  width: 135px;
+}
+
+.footer-nav {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu li {
+  margin: 0 10px;
+}
+
+.nav-menu li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-menu li a:hover {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  header {
+      padding: 10px;
+  }
+
+  nav ul li {
+      display: block;
+      margin: 10px 0;
+  }
+}
